@@ -27,6 +27,7 @@ export default function Form() {
 
         const data = await response.json();
         console.log(data.message);
+        //^ related to fetch request, do not fully understand but noted to research later, related to turning data into a json 
 
         setFormValues({
             card_name: "",
