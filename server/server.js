@@ -35,10 +35,17 @@ app.get("/cards", async (req, res) => {
     res.json(result.rows);
 });
 
-app.post("/add-card", (req, res) => {
+app.post("/add-card", async (req, res) => {
 const newDATA = req.body;
-db.query(`INSERT INTO heros (card_name, src, description, level) VALUES($1, $2, $3, $4)`)
-    res.jason({message: "Data sent to the Database"});
+db.query(`INSERT INTO heros (card_name, src, description, level) VALUES($1, $2, $3, $4)`,
+    [
+        newDATA.card.name,
+        newData.src,
+        newData.description,
+        newData,level
+    ]
+)
+    res.json({message: "Data sent to the Database"});
 });
 
 //I need a route to READ data from the database
