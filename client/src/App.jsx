@@ -1,21 +1,16 @@
-import { useState, useEffect } from "react";
+
 import Form from "./components/Form";
 import CardList from "./components/CardList";
 
 export default function App() {
-  const [cards, setCards] = useState([]);
-
   
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch("http://localhost:8080/cards");
-
-  }
+  
   return (
     <>
-      <h1>App</h1>
+      <h1>HERO card collection!</h1>
       <Form />
+      <h2>Card List</h2>
+      <CardList />
     </>
   );
 }
