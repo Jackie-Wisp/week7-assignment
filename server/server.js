@@ -5,6 +5,7 @@ import { db } from "./dbConnection.js";
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const PORT = 8080;
 app.listen(PORT, () => {
@@ -34,15 +35,9 @@ app.get("/cards", async (req, res) => {
     res.json(result.rows);
 });
 
-app.get("/cards", async (req, res) => {
-    const result = await db.query(`SELECT level FROM heros`);
-    res.json(result.rows);
-});
-
 app.post("/add-card", (req, res) => {
 const newDATA = req.body;
-db.query(`INSERT INTO heros (card_name, src, description, level)
-    VALUES($1, $2, $3, $4)`)
+db.query(`INSERT INTO heros (card_name, src, description, level) VALUES($1, $2, $3, $4)`)
     res.jason({message: "Data sent to the Database"});
 });
 
