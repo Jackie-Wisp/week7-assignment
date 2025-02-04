@@ -16,3 +16,5 @@ Develop further with adding a comments and like feature under each of the posts 
 Continue to improve git practices through branch commits etc.
 
 Gather a working understanding of CSS within react
+
+I will likely continue to commit and develop this as I would like to have a complete and finished working app. But I'm aware of the stage it is at upon deadline submission
