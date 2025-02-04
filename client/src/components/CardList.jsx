@@ -21,14 +21,13 @@ export default function CardList () {
     
     return (
       <div>
-        {/* Map over the cards array passed as props */}
         {cards.length > 0 ? (
           cards.map((card) => (
             <div key={card.id} className="card">
               <h3>{card.card_name}</h3>
-              <img src={card.src} alt={card.card_name}  />
+              <img src={card.src} />
               <p>{card.description}</p>
-              <p><strong>Level:</strong> {card.level}</p>
+              <p>Level: {card.level}</p>
             </div>
           ))
         ) : (

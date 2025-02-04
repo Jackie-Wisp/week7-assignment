@@ -52,6 +52,38 @@ export default function Form() {
             value={formValues.card_name}
             />
 
+            <label htmlFor="src">Image URL: </label>
+            <input
+            type="text"
+            id="src"
+            name="src"
+            placeholder="Enter Image URL"
+            required
+            onChange={handleChangeFormValues}
+            value={formValues.src}
+            />
+
+        <label htmlFor="description">Description: </label>
+        <input
+          id="description"
+          name="description"
+          placeholder="Enter card description"
+          required
+          onChange={handleChangeFormValues}
+          value={formValues.description}
+        />
+
+        <label htmlFor="level">Level: </label>
+        <input
+          type="number"
+          id="level"
+          name="level"
+          placeholder="Enter card level"
+          required
+          onChange={handleChangeFormValues}
+          value={formValues.level}
+        />
+
         <button type="submit">Submit Card</button>
       </form>
     </>
